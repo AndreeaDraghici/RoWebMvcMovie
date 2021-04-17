@@ -5,12 +5,12 @@
 
 The test consists of completing the first 5 steps (get started, add controller, add view, add model, work with a database) in the following tutorial: https://docs.microsoft.com/ro-ro/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-5.0&tabs=visual-studio
 
-TASK 1:
+TASK 1: (Test Stagiu)
 
 Similar to what is described in the tutorial, add the necessary elements for a movie collection.
 
 
-TASK 2:
+TASK 2:(Test Departajare)
 
 We want to bring new implementations, within the application, as follows:
 
