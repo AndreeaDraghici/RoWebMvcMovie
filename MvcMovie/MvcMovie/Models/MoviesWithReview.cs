@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace MvcMovie.Models
 {
-    public class MoviesWithReviews
+    public class MoviesWithReview
     {
-        public MoviesWithReviews(Movie movieItem, List<Review> reviewList)
+        public MoviesWithReview(Movie movieItem, List<Review> reviewList)
         {
             MovieItem = movieItem;
             ReviewList = reviewList;
