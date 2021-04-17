@@ -19,7 +19,7 @@ namespace MvcMovie
             this.AddRange(items);
         }
 
-        public bool HasPreviousPage //=> PageIndex > 1;
+        public bool HasPreviousPage
         {
             get
             {
