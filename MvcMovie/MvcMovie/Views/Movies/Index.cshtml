@@ -1,0 +1,79 @@
+﻿@model MvcMovie.Models.MovieGenreViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-controller="Movies" asp-action="Index" method="get">
+    <p>
+        <select asp-for="MovieGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].MovieItem.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].MovieItem.ReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].MovieItem.Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].MovieItem.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Movies)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieItem.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieItem.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieItem.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieItem.Price)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MovieItem.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MovieItem.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MovieItem.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.Movies.PageIndex )"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]">
+
+    @for (int i = 1; i <= Model.Movies.TotalPages; i++)
+    {
+        <a asp-action="Index"
+           asp-route-pageNumber="@i">
+            @i
+        </a>
+    }
+</a>
+>
