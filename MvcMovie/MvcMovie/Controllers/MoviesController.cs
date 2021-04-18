@@ -22,13 +22,13 @@ namespace MvcMovie.Controllers
         // GET: Movies
         public async Task<IActionResult> Index(string movieGenre, string searchString, int? pageNumber)
         {
-            // Use LINQ to get list of genres.
+            
             IQueryable<string> genreQuery = from m in _context.Movie
                                             orderby m.Genre
                                             select m.Genre;
 
             var movies = from m in _context.Movie
-                         select new MoviesWithReviews(m, (from r in _context.Review where r.MovieId.Equals(m.Id) select r).ToList());
+                         select new MoviesWithReview(m, (from r in _context.Review where r.MovieId.Equals(m.Id) select r).ToList());
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -43,7 +43,7 @@ namespace MvcMovie.Controllers
             var movieGenreVM = new MovieGenreViewModel()
             {
                 Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Movies = await PaginatedList<MoviesWithReviews>.CreateAsync(movies.AsNoTracking(), pageNumber ?? 1, pageSize)
+                Movies = await PaginatedList<MoviesWithReview>.CreateAsync(movies.AsNoTracking(), pageNumber ?? 1, pageSize)
             };
             return View(movieGenreVM);
         }
@@ -103,7 +103,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
         {
             if (ModelState.IsValid)
             {
