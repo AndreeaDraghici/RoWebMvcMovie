@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\incercare\\roweb\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {}
+    "C:\\Users\\user\\source\\repos\\RoWebMvcMovie\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\incercare\\roweb\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {
+    "C:\\Users\\user\\source\\repos\\RoWebMvcMovie\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\incercare\\roweb\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\RoWebMvcMovie\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "C:\\Users\\user\\Desktop\\incercare\\roweb\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\RoWebMvcMovie\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\incercare\\roweb\\MvcMovie\\MvcMovie\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\RoWebMvcMovie\\MvcMovie\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

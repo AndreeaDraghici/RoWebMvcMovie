@@ -63,7 +63,7 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
-            return View(new MoviesWithReviews(movie, (from r in _context.Review
+            return View(new MoviesWithReview(movie, (from r in _context.Review
                                                      where r.MovieId.Equals(movie.Id)
                                                      select r).ToList()));
         }

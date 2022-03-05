@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fxI3tsf6YC0PMfecy1fRm+Z04OQ5GC8nnD4H/lxNQ+RaEmSd+kfNtwzFNoGqGNe4L9+rDKyEDQ61tCX+llWq+A==",
+  "dgSpecHash": "mLyGkzEqVREjqYxWa23UxAP7VXBfegLoI9xzMjl3VZ3uMwQEQV3lF0lr3FAHBXI7zW5aXL8vk72XThGVbYgK+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\incercare\\roweb\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\RoWebMvcMovie\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
